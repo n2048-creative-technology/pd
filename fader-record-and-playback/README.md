@@ -10,4 +10,4 @@ This Pure Data patch allows you to record movement of faders (using a KORK Nano 
   
 ## 🖼️ Screenshot
 
-![Pure Data fader automation](assets/pd-x18-controller.png)
+![Pure Data fader automation](screenshot.png)
