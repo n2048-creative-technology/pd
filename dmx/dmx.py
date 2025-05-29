@@ -1,9 +1,10 @@
 import serial
 import time
 
-def send_dmx(ch, value):
+dmx_data = bytearray([0] * 512)   # 512 channels
+
+def send_dmx(ch=1, value=255, port='/dev/ttyUSB0'):
     start_code = 0x00
-    dmx_data = bytearray([0] * 512)   # 512 channels
     dmx_data[ch-1] = value           # CH1 = your value
 
     # Message structure
@@ -20,12 +21,5 @@ def send_dmx(ch, value):
     message.append(0xE7)              # End of message
 
     # Send via serial
-    with serial.Serial('/dev/ttyUSB0', baudrate=57600) as ser:
+    with serial.Serial(port, baudrate=57600) as ser:
         ser.write(message)
-
-# Example: Blink CH1
-while 1:
-    send_dmx(1,127)    # On
-    time.sleep(1)
-    send_dmx(1,0)    # Off
-    time.sleep(1)
