@@ -1,7 +1,7 @@
 import time 
 from dmx import send_dmx
 
-port = '/dev/ttyUSB1'
+port = '/dev/ttyUSB0'
 
 period=.1
 wait_time=period/255.
