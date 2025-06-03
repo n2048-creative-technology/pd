@@ -349,7 +349,7 @@
 #X obj 2027 409 &&;
 #X obj 2440 1077 r mixer1_ctl;
 #X text 2555 1077 MIXER 1-8;
-#N canvas 940 355 732 1049 hbeat 1;
+#N canvas 2914 198 732 1049 hbeat 1;
 #X obj 254 243 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 244 100 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 164 258 snapshot~;
