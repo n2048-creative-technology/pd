@@ -1,0 +1,19 @@
+#1 find devices: 
+ls /dev/ttyUSB*
+
+#2 get device info
+udevadm info -a -n /dev/ttyUSB1 | grep idVendor
+idProduct, idVendor, serial
+
+#3 create rules
+sudo nano /etc/udev/rules.d/99-usb-alias.rules
+
+rule example; 
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="FT1234ABC", SYMLINK+="my_usb_device"
+
+
+#4 reload udev rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+
