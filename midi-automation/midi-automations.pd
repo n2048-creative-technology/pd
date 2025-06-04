@@ -1,4 +1,4 @@
-#N canvas 418 125 2781 1446 12;
+#N canvas 418 125 2478 1325 12;
 #X obj 101 168 ctlin;
 #X obj 101 201 pack f f;
 #X msg 101 232 \$2 \$1;
@@ -401,7 +401,7 @@
 #X msg 2554 123 600;
 #X obj 2554 93 loadbang;
 #X obj 2621 297 bng 30 250 50 0 empty empty empty 0 -10 0 12 #ffffff #990400 #000000;
-#N canvas 1238 181 1865 1728 dmx_pack 1;
+#N canvas 695 40 1865 1325 dmx_pack 1;
 #X obj 17 19 inlet;
 #X obj 17 44 * 2;
 #X obj 17 69 i;
@@ -485,9 +485,9 @@
 #X obj 839 92 t b f;
 #X obj 17 314 list prepend 126 6 1 2 0;
 #X obj 17 342 list append 231;
-#X obj 87 632 cyclone/append 32 13;
-#X obj 86 578 moocow/any2bytes;
-#X obj 86 604 cyclone/zl ecils 1;
+#X obj 60 765 cyclone/append 32 13;
+#X obj 59 711 moocow/any2bytes;
+#X obj 59 737 cyclone/zl ecils 1;
 #X obj 408 382 loadbang;
 #X msg 249 510 devices usb;
 #X obj 371 656 comport 32 57600;
@@ -499,7 +499,7 @@
 #X obj 85 491 metro 20;
 #X obj 371 684 print ENTTEC;
 #X floatatom 481 724 10 0 0 3 baud - - 0;
-#X floatatom 562 724 3 0 0 3 port - - 0;
+#X floatatom 562 724 5 0 0 3 port - - 0;
 #X obj 642 724 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828 #000000 0 1;
 #X obj 724 724 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828 #000000 0 1;
 #X floatatom 803 723 8 0 0 3 rxerrors - - 0;
@@ -517,6 +517,8 @@
 #X msg 531 572 0;
 #X msg 388 488 devicename /dev/enttec;
 #X msg 466 517 devicename /dev/ttyUSB1;
+#X obj 275 392 r dmx_msg;
+#X obj 275 417 print;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -620,7 +622,6 @@
 #X connect 80 1 4 19;
 #X connect 81 0 82 0;
 #X connect 82 0 90 0;
-#X connect 83 0 88 0;
 #X connect 84 0 85 0;
 #X connect 85 0 83 0;
 #X connect 86 0 110 0;
@@ -633,6 +634,7 @@
 #X connect 91 0 93 0;
 #X connect 92 0 93 1;
 #X connect 93 0 84 0;
+#X connect 93 0 88 0;
 #X connect 94 0 91 0;
 #X connect 98 0 107 0;
 #X connect 101 0 96 0;
@@ -651,9 +653,10 @@
 #X connect 112 0 98 0;
 #X connect 113 0 88 0;
 #X connect 114 0 88 0;
+#X connect 115 0 116 0;
 #X restore 92 1364 pd dmx_pack;
 #X f 164;
-#N canvas 276 212 2970 1630 light_bars 1;
+#N canvas 82 40 2478 1325 light_bars 1;
 #X obj 17 19 inlet;
 #X obj 17 44 * 2;
 #X obj 17 69 i;
