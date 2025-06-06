@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Picker to Pd</title>
+</head>
+<body>
+  <h1>Color Picker → Pd via WebSocket</h1>
+  <input type="color" id="colorInput">
+  <pre id="log"></pre>
+
+  <script>
+    const ws = new WebSocket("ws://localhost:8080");
+
+    ws.onopen = () => {
+      document.getElementById('colorInput').addEventListener('input', e => {
+        const hex = e.target.value;
+        const r = parseInt(hex.substring(1, 3), 16);
+        const g = parseInt(hex.substring(3, 5), 16);
+        const b = parseInt(hex.substring(5, 7), 16);
+        const rgbString = `rgb ${r} ${g} ${b}`;
+        ws.send(rgbString);
+        document.getElementById('log').textContent = `Sent: ${rgbString}`;
+      });
+    };
+
+    ws.onmessage = (e) => {
+      console.log("From Pd:", e.data);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pd Socket Test</title>
+</head>
+<body>
+  <h1>Web ↔ Pd Bridge</h1>
+  <input id="msg" placeholder="Type message">
+  <button onclick="sendMsg()">Send to Pd</button>
+  <pre id="log"></pre>
+
+  <script>
+    const ws = new WebSocket('ws://localhost:8080');
+
+    ws.onmessage = (e) => {
+      document.getElementById('log').textContent += 'From Pd: ' + e.data + '\n';
+    };
+
+    function sendMsg() {
+      const val = document.getElementById('msg').value;
+      ws.send(val);
+    }
+  </script>
+</body>
+</html>
