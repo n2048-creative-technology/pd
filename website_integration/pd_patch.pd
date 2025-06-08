@@ -1,4 +1,4 @@
-#N canvas 849 212 450 300 10;
+#N canvas 1321 40 1239 625 10;
 #X obj 50 50 loadbang;
 #X msg 50 80 connect localhost 9000;
 #X obj 50 110 netsend;
@@ -8,9 +8,9 @@
 #X obj 214 65 symbol hello;
 #X obj 370 103 random 10;
 #X obj 218 22 bng 18 250 50 0 empty empty empty 0 -9 0 10 #fcfcfc #000000 #000000;
-#X obj 177 174 netreceive 9001;
-#X obj 177 197 route fromBrowser;
-#X obj 177 220 print;
+#X obj 205 219 netreceive 9001;
+#X obj 205 242 print;
+#X msg 193 184 listen 9001;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 3 0 5 0;
@@ -20,4 +20,4 @@
 #X connect 7 0 2 0;
 #X connect 8 0 6 0;
 #X connect 9 0 10 0;
-#X connect 10 0 11 0;
+#X connect 11 0 9 0;
