@@ -1,56 +1,78 @@
 #N canvas 847 117 1513 603 12;
-#X obj 350 172 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 347 34 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 341 71 metro 1000;
-#X obj 156 370 *~;
-#X obj 232 184 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 268 445 dac~;
-#X floatatom 290 324 5 0 0 0 - - - 0;
-#X obj 292 288 line 0 10;
-#X msg 292 259 \$1 200;
-#X msg 350 222 0;
-#X obj 601 193 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 407 376 *~;
-#X obj 483 181 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
-#X floatatom 541 345 5 0 0 0 - - - 0;
-#X obj 543 309 line 0 10;
-#X msg 543 280 \$1 200;
-#X msg 601 243 0;
-#X obj 438 30 hsl 170 20 500 4000 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
-#X floatatom 445 66 5 0 0 0 - - - 0;
-#X obj 937 164 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 934 26 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 928 63 metro 1000;
-#X obj 743 362 *~;
-#X obj 819 176 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 855 437 dac~;
-#X floatatom 877 316 5 0 0 0 - - - 0;
-#X obj 879 280 line 0 10;
-#X msg 879 251 \$1 200;
-#X obj 937 189 delay 300;
-#X msg 937 214 0;
-#X obj 1188 185 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 994 368 *~;
-#X obj 1070 173 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
-#X floatatom 1128 337 5 0 0 0 - - - 0;
-#X obj 1130 301 line 0 10;
-#X msg 1130 272 \$1 200;
-#X msg 1188 235 0;
-#X msg 1132 236 0.5;
-#X obj 977 105 delay 200;
-#X obj 1188 210 delay 100;
-#X msg 881 215 0.1;
-#X obj 1035 33 hsl 170 20 500 4000 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
-#X floatatom 1032 58 5 0 0 0 - - - 0;
-#X obj 985 269 osc~ 410;
-#X obj 734 263 osc~ 402;
-#X obj 147 271 osc~ 989;
-#X obj 398 277 osc~ 1002;
-#X obj 350 197 delay 30;
-#X obj 601 218 delay 30;
-#X obj 390 113 delay 100;
-#X msg 294 223 0.2;
-#X msg 545 244 0.5;
+#X obj 311 272 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000;
+#X obj 302 134 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
+#000000 0 1;
+#X obj 302 171 metro 1000;
+#X obj 117 470 *~;
+#X obj 193 284 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc
+#000000 #000000 0 1;
+#X obj 229 545 dac~;
+#X floatatom 251 424 5 0 0 0 - - - 0;
+#X obj 253 388 line 0 10;
+#X msg 253 359 \$1 200;
+#X msg 311 322 0;
+#X obj 562 293 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000;
+#X obj 368 476 *~;
+#X obj 444 281 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 502 445 5 0 0 0 - - - 0;
+#X obj 504 409 line 0 10;
+#X msg 504 380 \$1 200;
+#X msg 562 343 0;
+#X obj 399 130 hsl 170 20 500 4000 0 0 empty empty empty -2 -10 0 12
+#fcfcfc #000000 #000000 0 1;
+#X floatatom 406 166 5 0 0 0 - - - 0;
+#X obj 898 264 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000;
+#X obj 889 126 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
+#000000 0 1;
+#X obj 889 163 metro 1000;
+#X obj 704 462 *~;
+#X obj 780 276 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc
+#000000 #000000 0 1;
+#X obj 816 537 dac~;
+#X floatatom 838 416 5 0 0 0 - - - 0;
+#X obj 840 380 line 0 10;
+#X msg 840 351 \$1 200;
+#X obj 898 289 delay 300;
+#X msg 898 314 0;
+#X obj 1149 285 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000;
+#X obj 955 468 *~;
+#X obj 1031 273 vsl 20 170 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 1089 437 5 0 0 0 - - - 0;
+#X obj 1091 401 line 0 10;
+#X msg 1091 372 \$1 200;
+#X msg 1149 335 0;
+#X msg 1093 336 0.5;
+#X obj 938 205 delay 200;
+#X obj 1149 310 delay 100;
+#X msg 842 315 0.1;
+#X obj 996 133 hsl 170 20 500 4000 0 0 empty empty empty -2 -10 0 12
+#fcfcfc #000000 #000000 0 1;
+#X floatatom 993 158 5 0 0 0 - - - 0;
+#X obj 946 369 osc~ 410;
+#X obj 695 363 osc~ 402;
+#X obj 108 371 osc~ 989;
+#X obj 359 377 osc~ 1002;
+#X obj 311 297 delay 30;
+#X obj 562 318 delay 30;
+#X obj 351 213 delay 100;
+#X msg 255 323 0.2;
+#X msg 506 344 0.5;
+#X obj 33 37 loadbang;
+#X obj 33 62 delay 1000;
+#X msg 33 87 1;
+#X obj 33 112 s lb;
+#X obj 302 104 r lb;
+#X msg 396 100 1200;
+#X obj 396 74 r lb;
+#X obj 993 80 r lb;
+#X obj 889 96 r lb;
+#X msg 993 106 3500;
 #X connect 0 0 47 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
@@ -107,3 +129,12 @@
 #X connect 49 0 10 0;
 #X connect 50 0 8 0;
 #X connect 51 0 15 0;
+#X connect 52 0 53 0;
+#X connect 53 0 54 0;
+#X connect 54 0 55 0;
+#X connect 56 0 1 0;
+#X connect 57 0 17 0;
+#X connect 58 0 57 0;
+#X connect 59 0 61 0;
+#X connect 60 0 20 0;
+#X connect 61 0 41 0;
