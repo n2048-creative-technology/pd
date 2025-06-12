@@ -1,10 +1,12 @@
+#!/usr/bin/python3
+
 import time 
 from dmx import send_dmx, send_batch_dmx
 from random import random
 
 port = '/dev/ttyUSB0'
 
-period=3
+period=2
 steps=256;
 wait_time=period/steps
 max_intensity=255

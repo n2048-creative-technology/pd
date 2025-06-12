@@ -9,7 +9,7 @@ port = '/dev/enttec'
 try:
     while True:
         for ch in range(8):
-            send_dmx(ch+1,port)    # On
+            send_dmx(ch+1,255,port)    # On
             time.sleep(0.05)  # ~20 fps, reasonable update rate
 except KeyboardInterrupt:
     pass

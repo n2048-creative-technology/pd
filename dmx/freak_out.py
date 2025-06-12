@@ -5,7 +5,7 @@ from dmx import send_dmx, send_batch_dmx
 from random import random
 
 port = '/dev/enttec'
-max_intensity = 100
+max_intensity = 10
 
 send_batch_dmx(0)
 
