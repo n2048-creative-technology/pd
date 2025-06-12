@@ -1,4 +1,4 @@
-#N canvas -132 139 1858 975 12;
+#N canvas 688 94 1858 975 12;
 #X obj 101 168 ctlin;
 #X obj 101 201 pack f f;
 #X msg 101 232 \$2 \$1;
@@ -251,7 +251,7 @@
 #X msg 1822 117 1;
 #X obj 1823 177 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 1859 113 r start;
-#X obj 499 119 r all_end;
+#X obj 499 72 r all_end;
 #X msg 1970 143 0;
 #X msg 1932 114 1;
 #X obj 1933 174 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
@@ -275,7 +275,7 @@
 #X obj 2272 100 r start;
 #X obj 1903 344 &&;
 #X obj 1964 377 &&;
-#X obj 617 31 loadbang;
+#X obj 624 53 loadbang;
 #X msg 638 137 1;
 #X obj 629 701 textfile;
 #X obj 196 696 textfile;
@@ -1495,6 +1495,7 @@
 #X connect 54 0 27 0;
 #X restore 2122 1346 pd respirators;
 #X f 24;
+#X obj 499 97 del 0;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 1 0 2 0;
@@ -1779,7 +1780,7 @@
 #X connect 249 0 250 0;
 #X connect 250 0 246 1;
 #X connect 251 0 248 0;
-#X connect 252 0 5 0;
+#X connect 252 0 369 0;
 #X connect 253 0 255 0;
 #X connect 254 0 255 0;
 #X connect 255 0 260 1;
@@ -1804,6 +1805,7 @@
 #X connect 274 0 275 0;
 #X connect 275 0 345 0;
 #X connect 276 0 299 0;
+#X connect 276 0 286 0;
 #X connect 277 0 17 0;
 #X connect 278 0 64 0;
 #X connect 278 1 117 0;
@@ -1934,3 +1936,4 @@
 #X connect 367 1 211 0;
 #X connect 367 2 212 0;
 #X connect 367 3 213 0;
+#X connect 369 0 5 0;
