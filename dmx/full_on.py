@@ -6,9 +6,6 @@ from random import random
 
 port = '/dev/enttec'
 
-try:
-    while True:
-        send_batch_dmx(255,port)    # On
-        time.sleep(0.05)  # ~20 fps, reasonable update rate
-except KeyboardInterrupt:
-    pass
+send_batch_dmx(255, port)
+time.sleep(0.05)  # ~20 fps, reasonable update rate
+
