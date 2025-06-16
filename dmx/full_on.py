@@ -6,6 +6,6 @@ from random import random
 
 port = '/dev/enttec'
 
-send_batch_dmx(255, port)
+send_batch_dmx(50, port)
 time.sleep(0.05)  # ~20 fps, reasonable update rate
 

@@ -1,4 +1,4 @@
-#N canvas 688 94 1920 984 12;
+#N canvas 462 46 1440 720 12;
 #X obj 101 168 ctlin;
 #X obj 101 201 pack f f;
 #X msg 101 232 \$2 \$1;
@@ -502,7 +502,7 @@
 #X obj 2554 93 loadbang;
 #X obj 2621 297 bng 30 250 50 0 empty empty empty 0 -10 0 12 #ffffff
 #990400 #000000;
-#N canvas 350 405 1053 813 dmx_pack 0;
+#N canvas 350 405 1053 813 dmx_pack 1;
 #X obj 17 19 inlet;
 #X obj 17 44 * 2;
 #X obj 17 69 i;
@@ -607,7 +607,7 @@
 #X obj 445 442 metro 600000;
 #X msg 406 603 info;
 #X obj 642 765 s enttec_open;
-#X obj 82 440 r enttec_open;
+#X obj 81 404 r enttec_open;
 #X msg 531 572 0;
 #X msg 388 488 devicename /dev/enttec;
 #X obj 85 571 metro 10;
@@ -630,6 +630,7 @@
 #X obj 82 468 t b f;
 #X obj 85 533 &&;
 #X obj 257 404 r dmx_serial_data;
+#X obj 81 429 del 0;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -748,7 +749,7 @@
 #X connect 95 4 94 0;
 #X connect 97 0 102 0;
 #X connect 98 0 84 0;
-#X connect 100 0 116 0;
+#X connect 100 0 119 0;
 #X connect 101 0 92 0;
 #X connect 102 0 84 0;
 #X connect 102 0 98 0;
@@ -769,6 +770,7 @@
 #X connect 116 1 115 1;
 #X connect 117 0 103 0;
 #X connect 118 0 111 0;
+#X connect 119 0 116 0;
 #X restore 92 1364 pd dmx_pack;
 #X f 164;
 #N canvas 347 292 1920 984 light_bars 0;
