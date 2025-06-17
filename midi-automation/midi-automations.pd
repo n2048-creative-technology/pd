@@ -1,464 +1,365 @@
-#N canvas 462 46 1440 720 12;
+#N canvas 104 40 3708 1970 12;
 #X obj 101 168 ctlin;
-#X obj 101 201 pack f f;
-#X msg 101 232 \$2 \$1;
-#X obj 102 260 s midi;
-#X obj 580 275 realtime;
-#X obj 499 171 bng 40 250 50 0 empty empty START 0 -10 0 12 #ffffff
-#00ff04 #000000;
+#X obj 101 198 pack f f;
+#X msg 101 228 \$2 \$1;
+#X obj 101 258 s midi;
+#X obj 580 260 realtime;
+#X obj 499 168 bng 40 250 50 0 empty empty START 0 -10 0 12 #ffffff #00ff04 #000000;
 #X obj 399 144 r rt;
-#X obj 399 173 / 1000;
-#X obj 399 205 mod 60;
-#X obj 399 230 i;
-#X floatatom 396 260 5 0 0 3 sec - - 36;
-#X obj 276 207 mod 60;
-#X obj 276 232 i;
-#X floatatom 276 260 5 0 0 3 min - - 36;
-#X obj 276 180 / 60;
-#X obj 580 308 s rt;
-#X obj 611 227 metro 1;
-#X obj 608 176 tgl 40 0 empty empty RUN 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
-#X obj 522 243 s start;
-#X msg 215 660 rewind;
-#X obj 196 502 bng 30 250 50 0 empty empty LOAD\\\ RECORDING 0 -10
-0 12 #fcfcfc #0400ff #000000;
-#X floatatom 186 891 7 0 0 0 - - - 0;
+#X obj 399 174 / 1000;
+#X obj 399 204 mod 60;
+#X obj 399 234 i;
+#X floatatom 399 264 5 0 0 3 sec - - 36;
+#X obj 276 198 mod 60;
+#X obj 276 228 i;
+#X floatatom 276 258 5 0 0 3 min - - 36;
+#X obj 276 168 / 60;
+#X obj 580 290 s rt;
+#X obj 611 232 metro 1;
+#X obj 600 153 tgl 40 0 empty empty RUN 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 522 232 s start;
+#X msg 215 658 rewind;
+#X obj 196 489 bng 30 250 50 0 empty empty LOAD\ RECORDING 0 -10 0 12 #fcfcfc #0400ff #000000;
+#X floatatom 186 898 7 0 0 0 - - - 0;
 #X obj 129 898 r rt;
 #X obj 175 953 >=;
-#X floatatom 129 923 12 0 0 0 - - - 0;
-#X obj 175 987 select 1;
+#X floatatom 129 928 12 0 0 0 - - - 0;
+#X obj 175 983 select 1;
 #X obj 215 598 r start;
-#X obj 1329 305 netsend;
-#X text 1390 304 $ pdreceive 3000 > data.log;
-#X msg 1581 152 disconnect;
-#X msg 1396 152 connect localhost 3000;
-#X obj 797 201 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X text 912 118 RECORD;
+#X obj 1329 308 netsend;
+#X text 1390 307 $ pdreceive 3000 > data.log;
+#X msg 1581 168 disconnect;
+#X msg 1396 168 connect localhost 3000;
+#X obj 797 185 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X text 912 122 RECORD;
 #X obj 797 123 r midi;
 #X obj 797 153 route 0 1 2 3 4 5 6 7, f 62;
-#X obj 851 200 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 905 200 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 959 199 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1013 198 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1067 197 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1121 197 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1176 196 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
+#X obj 851 185 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 905 185 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 959 185 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1013 185 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1067 185 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1121 185 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1176 185 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 196 769 unpack f f f f, f 19;
 #X msg 196 570 read dimmer.log;
 #X obj 239 835 pack f f f, f 13;
-#X obj 186 804 t b f;
+#X obj 196 799 t b f;
 #X obj 249 730 s dimmer_eof;
-#X obj 277 659 r dimmer_nextline;
-#X obj 175 1015 s dimmer_nextline;
-#X obj 239 863 s dimmer_ctl;
-#X obj 254 898 r dimmer_eof;
-#X obj 254 923 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 277 660 r dimmer_nextline;
+#X obj 175 1013 s dimmer_nextline;
+#X obj 239 865 s dimmer_ctl;
+#X obj 239 895 r dimmer_eof;
+#X obj 239 925 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 347 898 r start;
-#X obj 347 923 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 255 951 r dimmer_nextline;
-#X obj 255 976 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X msg 648 665 rewind;
-#X obj 629 507 bng 30 250 50 0 empty empty LOAD\\\ RECORDING 0 -10
-0 12 #fcfcfc #0400ff #000000;
-#X floatatom 619 896 7 0 0 0 - - - 0;
-#X obj 562 903 r rt;
-#X obj 608 958 >=;
+#X obj 347 928 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 239 955 r dimmer_nextline;
+#X obj 239 985 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X msg 648 658 rewind;
+#X obj 629 489 bng 30 250 50 0 empty empty LOAD\ RECORDING 0 -10 0 12 #fcfcfc #0400ff #000000;
+#X floatatom 619 898 7 0 0 0 - - - 0;
+#X obj 562 898 r rt;
+#X obj 608 953 >=;
 #X floatatom 562 928 12 0 0 0 - - - 0;
-#X obj 608 992 select 1;
-#X obj 648 611 r start;
-#X obj 629 774 unpack f f f f, f 19;
-#X obj 672 840 pack f f f, f 13;
-#X obj 619 809 t b f;
-#X obj 687 926 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 793 901 r start;
-#X obj 793 926 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 688 979 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 95 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 93 1073 route 0 1 2 3 4 5 6 7, f 62;
-#X obj 148 1164 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 203 1164 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 257 1163 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 311 1162 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 364 1161 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 418 1161 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 472 1160 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
+#X obj 608 983 select 1;
+#X obj 648 598 r start;
+#X obj 629 769 unpack f f f f, f 19;
+#X obj 672 835 pack f f f, f 13;
+#X obj 629 799 t b f;
+#X obj 672 925 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 793 898 r start;
+#X obj 793 928 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 672 985 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 95 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 92 1073 route 0 1 2 3 4 5 6 7, f 62;
+#X obj 148 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 203 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 257 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 311 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 364 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 418 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 472 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 92 1043 r dimmer_ctl;
-#X text 207 1043 DIMMER;
-#X obj 579 1160 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 579 1074 route 0 1 2 3 4 5 6 7, f 62;
-#X obj 633 1159 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 687 1159 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 741 1158 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 795 1157 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 849 1156 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 903 1156 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 958 1155 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1109 701 textfile;
-#X msg 1128 665 rewind;
-#X obj 1109 507 bng 30 250 50 0 empty empty LOAD\\\ RECORDING 0 -10
-0 12 #fcfcfc #0400ff #000000;
-#X floatatom 1099 896 8 0 0 0 - - - 0;
-#X obj 1042 903 r rt;
-#X obj 1088 958 >=;
+#X text 207 1042 DIMMER;
+#X obj 579 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 579 1073 route 0 1 2 3 4 5 6 7, f 62;
+#X obj 633 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 687 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 741 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 795 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 849 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 903 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 958 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1109 696 textfile;
+#X msg 1128 660 rewind;
+#X obj 1109 489 bng 30 250 50 0 empty empty LOAD\ RECORDING 0 -10 0 12 #fcfcfc #0400ff #000000;
+#X floatatom 1099 898 8 0 0 0 - - - 0;
+#X obj 1042 898 r rt;
+#X obj 1088 953 >=;
 #X floatatom 1042 928 12 0 0 0 - - - 0;
-#X obj 1088 992 select 1;
-#X obj 1124 604 r start;
-#X obj 1109 774 unpack f f f f, f 19;
-#X obj 1152 840 pack f f f, f 13;
-#X obj 1099 809 t b f;
-#X obj 1175 926 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 1282 901 r start;
-#X obj 1282 926 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 1176 979 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 1059 1160 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1113 1159 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1167 1159 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1221 1158 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 608 1020 s ceiling1_nextline;
-#X obj 579 1044 r ceiling1_ctl;
-#X obj 672 868 s ceiling1_ctl;
-#X obj 688 954 r ceiling1_nextline;
-#X obj 687 901 r ceiling1_eof;
-#X obj 710 664 r ceiling1_nextline;
-#X obj 682 735 s ceiling1_eof;
-#X msg 629 575 read ceiling1.log;
-#X msg 1109 575 read ceiling2.log;
-#X obj 1190 664 r ceiling2_nextline;
-#X obj 1162 735 s ceiling2_eof;
-#X obj 1175 901 r ceiling2_eof;
-#X obj 1176 954 r ceiling2_nextline;
-#X obj 1152 868 s ceiling2_ctl;
-#X obj 1088 1020 s ceiling2_nextline;
-#X obj 1059 1046 r ceiling2_ctl;
-#X text 1174 1046 COMTROL ROOM;
-#X obj 1059 1076 route 0 1 2 3, f 31;
-#X obj 1414 697 textfile;
-#X msg 1433 661 rewind;
-#X obj 1414 503 bng 30 250 50 0 empty empty LOAD\\\ RECORDING 0 -10
-0 12 #fcfcfc #0400ff #000000;
-#X floatatom 1404 892 7 0 0 0 - - - 0;
-#X obj 1347 899 r rt;
-#X obj 1393 954 >=;
-#X floatatom 1347 924 12 0 0 0 - - - 0;
-#X obj 1393 988 select 1;
-#X obj 1433 599 r start;
-#X obj 1414 770 unpack f f f f, f 19;
-#X obj 1457 836 pack f f f, f 13;
-#X obj 1404 805 t b f;
-#X obj 1465 924 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 1554 899 r start;
-#X obj 1554 924 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 1466 977 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 1337 1158 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #ffe3c6
-#000000 #000000 0 1;
-#X obj 1391 1157 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1444 1157 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1499 1156 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1457 864 s pumps_ctl;
-#X obj 1466 952 r pumps_nextline;
-#X obj 1393 1016 s pumps_nextline;
-#X obj 1337 1041 r pumps_ctl;
-#X obj 1467 731 s pumps_eof;
-#X obj 1465 899 r pumps_eof;
-#X obj 647 275 realtime;
-#X obj 1329 152 r rtmidi;
-#X msg 1414 571 read pumps.log;
+#X obj 1088 983 select 1;
+#X obj 1109 600 r start;
+#X obj 1109 769 unpack f f f f, f 19;
+#X obj 1152 835 pack f f f, f 13;
+#X obj 1109 799 t b f;
+#X obj 1175 928 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1282 898 r start;
+#X obj 1282 928 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1175 988 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1059 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1113 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1167 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1221 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 608 1013 s ceiling1_nextline;
+#X obj 579 1043 r ceiling1_ctl;
+#X obj 672 865 s ceiling1_ctl;
+#X obj 672 955 r ceiling1_nextline;
+#X obj 672 895 r ceiling1_eof;
+#X obj 710 660 r ceiling1_nextline;
+#X obj 682 730 s ceiling1_eof;
+#X msg 629 570 read ceiling1.log;
+#X msg 1109 570 read ceiling2.log;
+#X obj 1190 660 r ceiling2_nextline;
+#X obj 1162 730 s ceiling2_eof;
+#X obj 1175 898 r ceiling2_eof;
+#X obj 1175 958 r ceiling2_nextline;
+#X obj 1152 865 s ceiling2_ctl;
+#X obj 1088 1013 s ceiling2_nextline;
+#X obj 1059 1043 r ceiling2_ctl;
+#X text 1174 1042 COMTROL ROOM;
+#X obj 1059 1073 route 0 1 2 3, f 31;
+#X obj 1414 696 textfile;
+#X msg 1433 658 rewind;
+#X obj 1414 502 bng 30 250 50 0 empty empty LOAD\ RECORDING 0 -10 0 12 #fcfcfc #0400ff #000000;
+#X floatatom 1404 898 7 0 0 0 - - - 0;
+#X obj 1347 898 r rt;
+#X obj 1393 953 >=;
+#X floatatom 1347 928 12 0 0 0 - - - 0;
+#X obj 1393 983 select 1;
+#X obj 1433 598 r start;
+#X obj 1414 769 unpack f f f f, f 19;
+#X obj 1457 835 pack f f f, f 13;
+#X obj 1414 799 t b f;
+#X obj 1457 925 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1554 898 r start;
+#X obj 1554 928 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1457 985 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1337 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #ffe3c6 #000000 #000000 0 1;
+#X obj 1391 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1444 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1499 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1457 865 s pumps_ctl;
+#X obj 1457 955 r pumps_nextline;
+#X obj 1393 1013 s pumps_nextline;
+#X obj 1337 1043 r pumps_ctl;
+#X obj 1467 730 s pumps_eof;
+#X obj 1457 895 r pumps_eof;
+#X obj 647 260 realtime;
+#X obj 1329 168 r rtmidi;
+#X msg 1414 570 read pumps.log;
 #X obj 1495 660 r pumps_nextline;
 #X obj 1706 696 textfile;
-#X msg 1725 660 rewind;
-#X obj 1706 502 bng 30 250 50 0 empty empty LOAD\\\ RECORDING 0 -10
-0 12 #fcfcfc #0400ff #000000;
-#X floatatom 1696 891 8 0 0 0 - - - 0;
+#X msg 1725 658 rewind;
+#X obj 1706 489 bng 30 250 50 0 empty empty LOAD\ RECORDING 0 -10 0 12 #fcfcfc #0400ff #000000;
+#X floatatom 1696 898 8 0 0 0 - - - 0;
 #X obj 1639 898 r rt;
 #X obj 1685 953 >=;
-#X floatatom 1639 923 12 0 0 0 - - - 0;
-#X obj 1685 987 select 1;
+#X floatatom 1639 928 12 0 0 0 - - - 0;
+#X obj 1685 983 select 1;
 #X obj 1725 598 r start;
 #X obj 1706 769 unpack f f f f, f 19;
 #X obj 1749 835 pack f f f, f 13;
-#X obj 1696 804 t b f;
-#X obj 1764 917 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 1848 892 r start;
-#X obj 1848 917 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 1765 970 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 1656 1155 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
+#X obj 1706 799 t b f;
+#X obj 1749 925 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1848 898 r start;
+#X obj 1848 928 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1749 955 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 1656 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 1655 1073 route 0 1 2 3 4 5 6 7, f 62;
-#X obj 1710 1154 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1764 1154 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1818 1153 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1872 1152 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1926 1151 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 1980 1151 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2035 1150 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
+#X obj 1710 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1764 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1818 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1872 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1926 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1980 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2035 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X msg 1706 570 read bars.log;
-#X obj 1787 659 r bars_nextline;
+#X obj 1787 660 r bars_nextline;
 #X obj 1759 730 s bars_eof;
-#X obj 1764 892 r bars_eof;
-#X obj 1765 945 r bars_nextline;
-#X obj 1749 863 s bars_ctl;
-#X obj 1685 1015 s bars_nextline;
+#X obj 1749 895 r bars_eof;
+#X obj 1765 953 r bars_nextline;
+#X obj 1749 865 s bars_ctl;
+#X obj 1685 1013 s bars_nextline;
 #X obj 1655 1043 r bars_ctl;
-#X text 1452 1041 DIALYSIS;
-#X text 1770 1043 LEVEL BARS;
-#X obj 2172 694 textfile;
+#X text 1452 1042 DIALYSIS;
+#X text 1770 1042 LEVEL BARS;
+#X obj 2172 696 textfile;
 #X msg 2191 658 rewind;
-#X obj 2172 500 bng 30 250 50 0 empty empty LOAD\\\ RECORDING 0 -10
-0 12 #fcfcfc #0400ff #000000;
-#X floatatom 2162 889 7 0 0 0 - - - 0;
-#X obj 2105 896 r rt;
-#X obj 2151 951 >=;
-#X floatatom 2105 921 12 0 0 0 - - - 0;
-#X obj 2151 985 select 1;
-#X obj 2191 596 r start;
-#X obj 2172 767 unpack f f f f, f 19;
-#X obj 2215 833 pack f f f, f 13;
-#X obj 2162 802 t b f;
-#X obj 2223 921 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 2312 896 r start;
-#X obj 2312 921 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 2224 974 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 2122 1153 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2176 1152 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2230 1152 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2284 1151 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2122 1071 route 0 1 2 3, f 31;
+#X obj 2172 502 bng 30 250 50 0 empty empty LOAD\ RECORDING 0 -10 0 12 #fcfcfc #0400ff #000000;
+#X floatatom 2162 898 7 0 0 0 - - - 0;
+#X obj 2105 898 r rt;
+#X obj 2151 953 >=;
+#X floatatom 2105 928 12 0 0 0 - - - 0;
+#X obj 2151 983 select 1;
+#X obj 2191 598 r start;
+#X obj 2172 769 unpack f f f f, f 19;
+#X obj 2215 835 pack f f f, f 13;
+#X obj 2172 799 t b f;
+#X obj 2215 925 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 2312 898 r start;
+#X obj 2312 928 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 2215 985 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 2122 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2176 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2230 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2284 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2122 1073 route 0 1 2 3, f 31;
 #X obj 2151 1013 s lungs_nextline;
-#X obj 2122 1041 r lungs_ctl;
-#X text 2237 1041 RESPIRATOR;
-#X obj 2224 949 r lungs_nextline;
-#X obj 2223 896 r lungs_eof;
-#X obj 2215 861 s lungs_ctl;
-#X obj 2225 728 s lungs_eof;
-#X obj 2253 657 r lungs_nextline;
-#X msg 2172 568 read lungs.log;
-#X obj 2235 80 r lungs_eof;
-#X obj 2137 81 r bars_eof;
-#X obj 2041 82 r pumps_eof;
-#X obj 1726 83 r dimmer_eof;
-#X obj 1822 83 r ceiling1_eof;
-#X obj 1932 82 r ceiling2_eof;
-#X obj 682 167 r midi;
-#X obj 682 208 unpack f f f;
+#X obj 2122 1043 r lungs_ctl;
+#X text 2237 1042 RESPIRATOR;
+#X obj 2215 955 r lungs_nextline;
+#X obj 2215 895 r lungs_eof;
+#X obj 2215 865 s lungs_ctl;
+#X obj 2225 730 s lungs_eof;
+#X obj 2253 660 r lungs_nextline;
+#X msg 2172 570 read lungs.log;
+#X obj 2235 72 r lungs_eof;
+#X obj 2137 72 r bars_eof;
+#X obj 2041 72 r pumps_eof;
+#X obj 1726 72 r dimmer_eof;
+#X obj 1822 72 r ceiling1_eof;
+#X obj 1932 72 r ceiling2_eof;
+#X obj 682 168 r midi;
+#X obj 682 198 unpack f f f;
 #X obj 668 349 pack f f f f;
-#X obj 675 381 s rtmidi;
-#X obj 645 385 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 647 300 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 680 238 t b f;
-#X obj 636 633 t b b;
-#X obj 205 628 t b b;
-#X obj 1117 633 t b b;
-#X obj 1422 629 t b b;
-#X obj 1713 628 t b b;
-#X obj 2179 626 t b b;
-#X msg 1764 152 0;
-#X msg 1726 123 1;
-#X obj 1727 183 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
-#X obj 1727 244 &&;
-#X obj 1763 119 r start;
-#X msg 1860 146 0;
-#X msg 1822 117 1;
-#X obj 1823 177 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
-#X obj 1859 113 r start;
+#X obj 668 379 s rtmidi;
+#X obj 645 385 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 647 290 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 682 228 t b f;
+#X obj 648 628 t b b;
+#X obj 215 628 t b b;
+#X obj 1109 630 t b b;
+#X obj 1433 628 t b b;
+#X obj 1725 628 t b b;
+#X obj 2191 628 t b b;
+#X msg 1763 153 0;
+#X msg 1726 102 1;
+#X obj 1727 168 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1727 228 &&;
+#X obj 1763 123 r start;
+#X msg 1859 153 0;
+#X msg 1822 102 1;
+#X obj 1823 168 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1859 123 r start;
 #X obj 499 72 r all_end;
-#X msg 1970 143 0;
-#X msg 1932 114 1;
-#X obj 1933 174 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
-#X obj 1969 110 r start;
-#X obj 1727 208 t f;
-#X obj 1675 182 r rt;
-#X obj 1675 207 t b f;
+#X msg 1969 153 0;
+#X msg 1932 102 1;
+#X obj 1933 168 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1969 123 r start;
+#X obj 1727 198 t f;
+#X obj 1675 168 r rt;
+#X obj 1675 198 t b f;
 #X obj 1779 279 &&;
-#X msg 2079 139 0;
-#X msg 2041 110 1;
-#X obj 2042 170 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
-#X obj 2078 106 r start;
-#X obj 1840 312 &&;
-#X msg 2175 138 0;
-#X msg 2137 109 1;
-#X obj 2138 169 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
-#X obj 2174 105 r start;
-#X msg 2273 133 0;
-#X msg 2235 104 1;
-#X obj 2236 164 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
-#X obj 2272 100 r start;
-#X obj 1903 344 &&;
-#X obj 1964 377 &&;
+#X msg 2078 153 0;
+#X msg 2041 102 1;
+#X obj 2042 168 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2078 123 r start;
+#X obj 1840 308 &&;
+#X msg 2174 127 0;
+#X msg 2137 102 1;
+#X obj 2138 168 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2174 97 r start;
+#X msg 2272 127 0;
+#X msg 2235 102 1;
+#X obj 2236 168 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2272 97 r start;
+#X obj 1903 349 &&;
+#X obj 1964 385 &&;
 #X obj 624 53 loadbang;
-#X msg 638 137 1;
-#X obj 629 701 textfile;
+#X msg 638 153 1;
+#X obj 629 696 textfile;
 #X obj 196 696 textfile;
 #X obj 196 459 loadbang;
-#X obj 629 455 loadbang;
-#X obj 1109 446 loadbang;
+#X obj 629 459 loadbang;
+#X obj 1109 459 loadbang;
 #X obj 1414 438 loadbang;
-#X obj 1706 442 loadbang;
-#X obj 2172 435 loadbang;
-#X obj 638 111 delay 2000;
+#X obj 1706 459 loadbang;
+#X obj 2172 438 loadbang;
+#X obj 638 123 delay 2000;
 #X obj 324 570 loadbang;
-#X obj 324 595 delay 1000;
-#X obj 764 573 loadbang;
-#X obj 764 598 delay 1000;
-#X obj 1248 572 loadbang;
-#X obj 1248 597 delay 1000;
-#X obj 1531 571 loadbang;
-#X obj 1531 596 delay 1000;
-#X obj 1822 571 loadbang;
-#X obj 1822 596 delay 1000;
-#X obj 2285 566 loadbang;
-#X obj 2285 591 delay 1000;
+#X obj 324 600 delay 1000;
+#X obj 764 570 loadbang;
+#X obj 764 600 delay 1000;
+#X obj 1248 570 loadbang;
+#X obj 1248 600 delay 1000;
+#X obj 1531 570 loadbang;
+#X obj 1531 600 delay 1000;
+#X obj 1822 570 loadbang;
+#X obj 1822 600 delay 1000;
+#X obj 2285 570 loadbang;
+#X obj 2285 600 delay 1000;
 #X msg 600 123 0;
-#X msg 2509 660 rewind;
-#X obj 2490 502 bng 30 250 50 0 empty empty LOAD\\\ RECORDING 0 -10
-0 12 #fcfcfc #0400ff #000000;
-#X floatatom 2480 891 7 0 0 0 - - - 0;
+#X msg 2509 658 rewind;
+#X obj 2490 489 bng 30 250 50 0 empty empty LOAD\ RECORDING 0 -10 0 12 #fcfcfc #0400ff #000000;
+#X floatatom 2480 898 7 0 0 0 - - - 0;
 #X obj 2423 898 r rt;
 #X obj 2469 953 >=;
-#X floatatom 2423 923 12 0 0 0 - - - 0;
-#X obj 2469 987 select 1;
-#X obj 2509 606 r start;
+#X floatatom 2423 928 12 0 0 0 - - - 0;
+#X obj 2469 983 select 1;
+#X obj 2509 598 r start;
 #X obj 2490 769 unpack f f f f, f 19;
 #X obj 2533 835 pack f f f, f 13;
-#X obj 2480 804 t b f;
-#X obj 2548 921 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 2654 896 r start;
-#X obj 2654 921 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 2549 974 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 2440 1155 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2440 1070 route 0 1 2 3 4 5 6 7, f 62;
-#X obj 2494 1154 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2548 1154 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2602 1153 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2656 1152 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2710 1151 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2764 1151 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2819 1150 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2497 628 t b b;
+#X obj 2490 799 t b f;
+#X obj 2533 925 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 2654 898 r start;
+#X obj 2654 928 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 2552 983 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 2440 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2440 1073 route 0 1 2 3 4 5 6 7, f 62;
+#X obj 2494 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2548 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2602 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2656 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2710 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2764 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2819 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2509 628 t b b;
 #X obj 2490 696 textfile;
-#X obj 2490 450 loadbang;
-#X obj 2625 568 loadbang;
-#X obj 2625 593 delay 1000;
+#X obj 2490 459 loadbang;
+#X obj 2625 570 loadbang;
+#X obj 2625 600 delay 1000;
 #X msg 2490 570 read mixer1.log;
-#X obj 2571 659 r mixer1_nextline;
+#X obj 2571 660 r mixer1_nextline;
 #X obj 2543 730 s mixer1_eof;
-#X obj 2533 863 s mixer1_ctl;
-#X obj 2548 896 r mixer1_eof;
-#X obj 2469 1015 s mixer1_nextline;
-#X obj 2552 952 r mixer1_nextline;
-#X msg 2379 130 0;
-#X msg 2341 101 1;
-#X obj 2342 161 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 2533 865 s mixer1_ctl;
+#X obj 2533 895 r mixer1_eof;
+#X obj 2469 1013 s mixer1_nextline;
+#X obj 2552 953 r mixer1_nextline;
+#X msg 2378 127 0;
+#X msg 2341 102 1;
+#X obj 2342 168 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 2378 97 r start;
-#X obj 2341 77 r mixer1_eof;
-#X obj 2027 442 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
-#X obj 2027 467 change;
-#X obj 2027 492 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 2027 517 s all_end;
+#X obj 2341 72 r mixer1_eof;
+#X obj 2027 439 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2027 469 change;
+#X obj 2027 499 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 2027 529 s all_end;
 #X obj 2027 409 &&;
-#X obj 2440 1040 r mixer1_ctl;
-#X text 2555 1040 MIXER 1-8;
+#X obj 2440 1043 r mixer1_ctl;
+#X text 2555 1042 MIXER 1-8;
 #N canvas 2642 925 732 1049 hbeat 0;
-#X obj 254 243 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 244 100 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 254 243 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 244 100 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 164 258 snapshot~;
-#X obj 223 304 vsl 20 170 -1 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
+#X obj 223 304 vsl 20 170 -1 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 158 323 > 0;
 #X obj 158 348 select 1;
-#X obj 158 373 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 158 373 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 34 266 snapshot~;
-#X obj 55 301 vsl 20 170 -1 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
+#X obj 55 301 vsl 20 170 -1 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 91 323 > 0;
 #X obj 91 348 select 1;
-#X obj 91 373 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 91 373 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X msg 245 66 1;
 #X obj 245 13 loadbang;
 #X obj 33 188 osc~ 3;
@@ -493,22 +394,18 @@
 #X connect 19 0 18 0;
 #X connect 19 0 20 0;
 #X connect 21 0 12 0;
-#X restore 2554 258 pd hbeat;
+#X restore 2554 252 pd hbeat;
 #X f 10;
-#X obj 2554 297 bng 30 250 50 0 empty empty empty 0 -10 0 12 #ffffff
-#990400 #000000;
-#X obj 2554 157 vsl 40 80 200 600 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
-#X obj 2554 93 loadbang;
-#X obj 2621 297 bng 30 250 50 0 empty empty empty 0 -10 0 12 #ffffff
-#990400 #000000;
+#X obj 2554 308 bng 30 250 50 0 empty empty empty 0 -10 0 12 #ffffff #990400 #000000;
+#X obj 2554 159 vsl 40 80 200 600 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2554 97 loadbang;
+#X obj 2621 308 bng 30 250 50 0 empty empty empty 0 -10 0 12 #ffffff #990400 #000000;
 #N canvas 350 405 1053 813 dmx_pack 1;
 #X obj 17 19 inlet;
 #X obj 17 44 * 2;
 #X obj 17 69 i;
 #X obj 17 94 t b f;
-#X obj 17 289 pack f f f f f f f f f f f f f f f f f f f f, f 123
-;
+#X obj 17 289 pack f f f f f f f f f f f f f f f f f f f f, f 123;
 #X obj 62 18 inlet;
 #X obj 62 43 * 2;
 #X obj 62 68 i;
@@ -591,16 +488,13 @@
 #X obj 371 656 comport 32 57600;
 #X msg 531 547 close;
 #X obj 13 374 s dmx_msg;
-#X obj 85 604 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 85 604 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 110 604 r dmx_msg;
 #X obj 85 631 list;
 #X floatatom 481 724 10 0 0 3 baud - - 0;
 #X floatatom 562 724 5 0 0 3 port - - 0;
-#X obj 642 724 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
-#X obj 724 724 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
+#X obj 642 724 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828 #000000 0 1;
+#X obj 724 724 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828 #000000 0 1;
 #X floatatom 803 723 8 0 0 3 rxerrors - - 0;
 #X obj 481 700 route baud port open hupcl rxerrors, f 58;
 #X text 501 680 general info;
@@ -612,20 +506,16 @@
 #X msg 388 488 devicename /dev/enttec;
 #X obj 85 571 metro 10;
 #X obj 418 541 r dmx_msg;
-#X obj 418 566 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 418 566 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 85 656 s dmx_serial_data;
 #X obj 246 622 r dmx_serial_data;
-#X obj 223 406 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 223 406 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X msg 223 431 1;
-#X obj 223 462 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 223 462 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X msg 257 431 0;
 #X obj 223 487 t b f;
 #X obj 223 377 r dmx_msg;
-#X obj 51 439 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 51 439 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 85 497 ||;
 #X obj 82 468 t b f;
 #X obj 85 533 &&;
@@ -817,10 +707,8 @@
 #X msg 577 663 close;
 #X floatatom 511 790 10 0 0 3 baud - - 0;
 #X floatatom 592 790 3 0 0 3 port - - 0;
-#X obj 672 790 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
-#X obj 754 790 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
+#X obj 672 790 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828 #000000 0 1;
+#X obj 754 790 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828 #000000 0 1;
 #X floatatom 833 789 8 0 0 3 rxerrors - - 0;
 #X obj 511 766 route baud port open hupcl rxerrors, f 58;
 #X text 531 746 general info;
@@ -828,14 +716,11 @@
 #X msg 577 688 0;
 #X obj 387 722 comport 32 115200;
 #X obj 69 672 list;
-#X obj 48 455 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 48 455 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 77 509 ||;
 #X obj 74 480 t b f;
-#X obj 125 722 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
-#X obj 426 632 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 125 722 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 426 632 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 78 534 metro 100;
 #X msg 387 558 devicename /dev/bars;
 #X obj 94 635 r lightbars_msg;
@@ -916,7 +801,7 @@
 #X connect 60 0 56 0;
 #X connect 62 0 54 0;
 #X connect 64 0 50 0;
-#X restore 1656 1348 pd light_bars;
+#X restore 1656 1364 pd light_bars;
 #X f 56;
 #N canvas 611 233 2970 1630 heartbeat 0;
 #X obj 17 6 inlet;
@@ -930,16 +815,13 @@
 #X msg 229 420 devices usb;
 #X msg 561 425 open 32;
 #X msg 561 454 close;
-#X obj 65 426 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 65 426 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 65 453 list;
 #X obj 65 401 metro 20;
 #X floatatom 475 634 10 0 0 3 baud - - 0;
 #X floatatom 556 634 3 0 0 3 port - - 0;
-#X obj 636 634 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
-#X obj 718 634 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
+#X obj 636 634 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828 #000000 0 1;
+#X obj 718 634 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828 #000000 0 1;
 #X floatatom 797 633 8 0 0 3 rxerrors - - 0;
 #X obj 475 610 route baud port open hupcl rxerrors, f 58;
 #X text 495 590 general info;
@@ -947,8 +829,7 @@
 #X msg 227 451 devices;
 #X msg 224 480 ports;
 #X msg 386 513 info;
-#X obj 385 460 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 385 460 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X msg 385 435 1;
 #X obj 386 486 metro 100;
 #X msg 561 479 0;
@@ -963,10 +844,8 @@
 #X msg 34 114 0;
 #X msg 184 113 1;
 #X msg 141 113 0;
-#X obj 17 31 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000;
-#X obj 135 28 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 17 31 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
+#X obj 135 28 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 17 57 delay 100;
 #X obj 135 53 delay 100;
 #X obj 34 139 t b f;
@@ -1027,12 +906,11 @@
 #X connect 46 1 35 1;
 #X connect 47 0 35 0;
 #X connect 47 1 35 1;
-#X restore 2363 371 pd heartbeat;
+#X restore 2363 385 pd heartbeat;
 #X f 56;
-#X text 694 1044 CRITICAL CARE UNIT (dimmer addr: 1001000000);
-#X obj 1337 1071 route 0 1 2 3 4, f 31;
-#X obj 1556 1157 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc
-#000000 #000000 0 1;
+#X text 694 1042 CRITICAL CARE UNIT (dimmer addr: 1001000000);
+#X obj 1337 1073 route 0 1 2 3 4, f 31;
+#X obj 1556 1165 vsl 20 170 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #N canvas 1091 311 935 822 pumps 1;
 #X obj 17 19 inlet;
 #X obj 18 95 i;
@@ -1060,10 +938,8 @@
 #X msg 561 597 close;
 #X floatatom 495 724 10 0 0 3 baud - - 0;
 #X floatatom 576 724 5 0 0 3 port - - 0;
-#X obj 656 724 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
-#X obj 738 724 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
+#X obj 656 724 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828 #000000 0 1;
+#X obj 738 724 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828 #000000 0 1;
 #X floatatom 817 723 8 0 0 3 rxerrors - - 0;
 #X obj 495 700 route baud port open hupcl rxerrors, f 58;
 #X text 515 680 general info;
@@ -1077,23 +953,19 @@
 #X obj 18 44 * 32;
 #X obj 18 69 + 1000;
 #X obj 61 606 list;
-#X obj 32 389 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 32 389 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 61 443 ||;
 #X obj 58 414 t b f;
 #X obj 19 319 s pumps_msg;
 #X obj 78 569 r pumps_msg;
 #X obj 409 534 r pumps_msg;
-#X obj 410 566 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 410 566 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 61 509 metro 100;
 #X obj 61 771 s pumps_serial_data;
 #X obj 232 624 r pumps_serial_data;
-#X obj 184 352 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 184 352 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X msg 184 377 1;
-#X obj 184 408 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 184 408 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X msg 218 377 0;
 #X obj 61 481 &&;
 #X obj 184 433 t b f;
@@ -1164,9 +1036,9 @@
 #X connect 56 1 55 1;
 #X connect 57 0 51 0;
 #X connect 58 0 54 0;
-#X restore 1341 1357 pd pumps;
+#X restore 1341 1364 pd pumps;
 #X f 33;
-#X msg 2554 123 230;
+#X msg 2554 127 230;
 #N canvas 252 188 2613 451 inter 0;
 #X obj 61 80 line 0 10;
 #X msg 61 55 \$1 10;
@@ -1224,7 +1096,7 @@
 #X connect 28 0 31 0;
 #X connect 29 0 28 0;
 #X connect 30 0 29 0;
-#X restore 92 1122 pd inter;
+#X restore 92 1103 pd inter;
 #X f 60;
 #N canvas 252 188 2613 451 inter 0;
 #X obj 61 80 line 0 10;
@@ -1283,7 +1155,7 @@
 #X connect 28 0 31 0;
 #X connect 29 0 28 0;
 #X connect 30 0 29 0;
-#X restore 576 1115 pd inter;
+#X restore 579 1103 pd inter;
 #X f 60;
 #N canvas 252 188 2613 451 inter 0;
 #X obj 61 80 line 0 10;
@@ -1314,7 +1186,7 @@
 #X connect 12 0 15 0;
 #X connect 13 0 12 0;
 #X connect 14 0 13 0;
-#X restore 1057 1114 pd inter;
+#X restore 1059 1103 pd inter;
 #X f 31;
 #N canvas 252 188 2613 451 inter 0;
 #X obj 61 80 line 0 10;
@@ -1352,7 +1224,7 @@
 #X connect 16 0 19 0;
 #X connect 17 0 16 0;
 #X connect 18 0 17 0;
-#X restore 1335 1109 pd inter;
+#X restore 1337 1103 pd inter;
 #X f 31;
 #N canvas 252 188 2613 451 inter 0;
 #X obj 61 80 line 0 10;
@@ -1411,7 +1283,7 @@
 #X connect 28 0 31 0;
 #X connect 29 0 28 0;
 #X connect 30 0 29 0;
-#X restore 1655 1107 pd inter;
+#X restore 1655 1103 pd inter;
 #X f 60;
 #N canvas 252 188 2613 451 inter 0;
 #X obj 61 80 line 0 10;
@@ -1470,7 +1342,7 @@
 #X connect 28 0 31 0;
 #X connect 29 0 28 0;
 #X connect 30 0 29 0;
-#X restore 2438 1105 pd inter;
+#X restore 2440 1103 pd inter;
 #X f 60;
 #N canvas 252 188 2613 451 inter 0;
 #X obj 61 80 line 0 10;
@@ -1501,7 +1373,7 @@
 #X connect 12 0 15 0;
 #X connect 13 0 12 0;
 #X connect 14 0 13 0;
-#X restore 2119 1104 pd inter;
+#X restore 2122 1103 pd inter;
 #X f 31;
 #N canvas 1091 311 935 822 respirators 1;
 #X obj 17 19 inlet;
@@ -1526,10 +1398,8 @@
 #X msg 561 597 close;
 #X floatatom 495 724 10 0 0 3 baud - - 0;
 #X floatatom 576 724 5 0 0 3 port - - 0;
-#X obj 656 724 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
-#X obj 738 724 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828
-#000000 0 1;
+#X obj 656 724 tgl 15 0 empty empty open -6 20 1 11 #14e814 #fc2828 #000000 0 1;
+#X obj 738 724 tgl 15 0 empty empty hupcl -6 20 1 11 #14e814 #fc2828 #000000 0 1;
 #X floatatom 817 723 8 0 0 3 rxerrors - - 0;
 #X obj 495 700 route baud port open hupcl rxerrors, f 58;
 #X text 515 680 general info;
@@ -1539,18 +1409,14 @@
 #X obj 18 44 * 32;
 #X obj 18 69 + 1000;
 #X obj 61 606 list;
-#X obj 32 389 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 32 389 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 61 443 ||;
 #X obj 58 414 t b f;
-#X obj 410 566 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 410 566 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 61 509 metro 100;
-#X obj 184 352 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
-#000000 #000000;
+#X obj 184 352 bng 20 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X msg 184 377 1;
-#X obj 184 408 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000
-#000000 0 1;
+#X obj 184 408 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X msg 218 377 0;
 #X obj 61 481 &&;
 #X obj 184 433 t b f;
@@ -1624,9 +1490,9 @@
 #X connect 52 0 36 0;
 #X connect 53 0 29 0;
 #X connect 53 0 27 0;
-#X restore 2124 1345 pd respirators;
+#X restore 2122 1348 pd respirators;
 #X f 24;
-#X obj 499 97 del 0;
+#X obj 499 102 del 0;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 1 0 2 0;
